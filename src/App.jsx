@@ -13,6 +13,9 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route index element={<Profil />} />
+        <Route path='/profil' element={<Profil />} />
+        <Route path='/reglage' element={<Profil />} />
+        <Route path='/communaute' element={<Profil />} />
         <Route path="*" element={<Error404 />} />
       </Route>,
     ),
