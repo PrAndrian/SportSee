@@ -1,0 +1,17 @@
+#profil{
+    display: flex;
+}
+
+.profil_content{
+    width: 100%;
+    padding: 29px 107px 0 107px;
+    margin-left: 117px;
+}
+
+h1{
+    font-size: 48px;
+}
+
+.name{
+    color: #FF0101;
+}

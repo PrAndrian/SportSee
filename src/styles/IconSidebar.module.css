@@ -1,0 +1,12 @@
+.icon{
+    background-color: white;
+    height: 64px;
+    width: 64px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon img{
+    object-fit: contain;
+}

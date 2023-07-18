@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav id={styles.navbar}>
+    <nav id={styles.navbar} aria-labelledby="navbar">
       <Link to="/">
         <img className={styles.logo} src={logo} alt="SportSee_logo"/>
       </Link>
