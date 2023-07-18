@@ -4,8 +4,9 @@
 
 .profil_content{
     width: 100%;
+    position: absolute;
     padding: 29px 107px 0 107px;
-    margin-left: 117px;
+    left: 117px;
 }
 
 h1{
