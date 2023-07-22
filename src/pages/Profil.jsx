@@ -3,6 +3,7 @@ import Sidebar from '../components/Profil/Sidebar'
 import styles from '../styles/Profil.module.css'
 import DailyActiveChart from '../components/DailyActiveChart';
 import data from '../data/data'
+import AverageSessionTime from '../components/AverageSessionTime';
 
 const Profil = () => {
   console.log(data)
@@ -10,7 +11,7 @@ const Profil = () => {
     <main id={styles.profil}>
         <Sidebar/>
         <section className={styles.profilContent}>
-          <h1>Bonjour <span className={styles.name}>{data.USER_MAIN_DATA[1].userInfos.firstName}</span></h1>
+          <h1>Bonjour <span className={styles.name}>{data.USER_MAIN_DATA[0].userInfos.firstName}</span></h1>
           <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
 
           <div className={styles.container}>
@@ -18,7 +19,7 @@ const Profil = () => {
               <div className={styles.chartsContainer}>
                 <DailyActiveChart sessions={data.USER_ACTIVITY[1].sessions}/>
                 <div className={styles.squareCharts}> 
-                  <div className={styles.square}></div>
+                    <AverageSessionTime sessions={data.USER_AVERAGE_SESSIONS[0].sessions}/>
                   <div className={styles.square}></div>
                   <div className={styles.square}></div>
                 </div>

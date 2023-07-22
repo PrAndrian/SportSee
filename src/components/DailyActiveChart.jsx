@@ -33,7 +33,8 @@ const DailyActiveChart = ({sessions}) => {
           />
 
           <XAxis 
-              // dataKey="day"
+              dataKey="day"
+              tickFormatter={dataKeyValue}
               dy={16}
               padding={{ left: -48, right: -48 }}
               stroke="#9b9eac"
@@ -115,4 +116,13 @@ function CusomizedLegend() {
     </div>
   );
 }
+
+let dataKeyValue = (day) => {
+  const date = new Date(day);
+  const dataKey = date.getDate();
+  dataKey.toString();
+  console.log(typeof dataKey);
+  return dataKey;
+};
+
 export default DailyActiveChart
