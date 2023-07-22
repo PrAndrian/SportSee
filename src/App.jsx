@@ -12,10 +12,10 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route index element={<Profil />} />
-        <Route path='/profil' element={<Profil />} />
-        <Route path='/reglage' element={<Profil />} />
-        <Route path='/communaute' element={<Profil />} />
+        <Route index element={<Profil />}/>
+        <Route path='/profil/' element={<Profil />}/>
+        <Route path='/reglage' element={<Error404 />}/>
+        <Route path='/communaute' element={<Error404 />}/>
         <Route path="*" element={<Error404 />} />
       </Route>,
     ),
