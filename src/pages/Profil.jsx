@@ -4,9 +4,11 @@ import styles from '../styles/Profil.module.css'
 import DailyActiveChart from '../components/DailyActiveChart';
 import data from '../data/data'
 import AverageSessionTime from '../components/AverageSessionTime';
+import PerformenceSession from '../components/PerformenceSession';
+import Score from '../components/Score';
 
 const Profil = () => {
-  console.log(data)
+  console.log(data.USER_MAIN_DATA[0].todayScore)
   return (
     <main id={styles.profil}>
         <Sidebar/>
@@ -17,11 +19,11 @@ const Profil = () => {
           <div className={styles.container}>
             <div className={styles.info}>
               <div className={styles.chartsContainer}>
-                <DailyActiveChart sessions={data.USER_ACTIVITY[1].sessions}/>
+                <DailyActiveChart sessions={data.USER_ACTIVITY[0].sessions}/>
                 <div className={styles.squareCharts}> 
                     <AverageSessionTime sessions={data.USER_AVERAGE_SESSIONS[0].sessions}/>
-                  <div className={styles.square}></div>
-                  <div className={styles.square}></div>
+                    <PerformenceSession performence={data.USER_PERFORMANCE[0].data}/>
+                    <Score score={data.USER_MAIN_DATA[0].todayScore}/>
                 </div>
               </div>
 

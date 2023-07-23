@@ -44,7 +44,7 @@ const AverageSessionTime = ({sessions}) => {
           />
           <Tooltip content={<SessionsToolType />} />
           <Line
-            type="bumpX"
+            type="bump"
             dataKey="sessionLength"
             stroke="url(#paint0_linear_2_122)"
             strokeWidth={2}
