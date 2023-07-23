@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/DailyActiveChart.module.css'
+import styles from '../../styles/DailyActiveChart.module.css'
 import { 
     BarChart, 
     Bar, 

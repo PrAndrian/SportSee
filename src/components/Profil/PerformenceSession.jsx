@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/PerformenceSession.module.css'
+import styles from '../../styles/PerformenceSession.module.css'
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 
 const PerformenceSession = ({performence}) => {

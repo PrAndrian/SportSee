@@ -1,11 +1,12 @@
 import React from 'react'
 import Sidebar from '../components/Profil/Sidebar'
 import styles from '../styles/Profil.module.css'
-import DailyActiveChart from '../components/DailyActiveChart';
+import DailyActiveChart from '../components/Profil/DailyActiveChart';
 import data from '../data/data'
-import AverageSessionTime from '../components/AverageSessionTime';
-import PerformenceSession from '../components/PerformenceSession';
-import Score from '../components/Score';
+import AverageSessionTime from '../components/Profil/AverageSessionTime';
+import PerformenceSession from '../components/Profil/PerformenceSession';
+import Score from '../components/Profil/Score';
+import CardKeyData from '../components/Profil/CardKeyData';
 
 const Profil = () => {
   console.log(data.USER_MAIN_DATA[0].todayScore)
@@ -23,15 +24,27 @@ const Profil = () => {
                 <div className={styles.squareCharts}> 
                     <AverageSessionTime sessions={data.USER_AVERAGE_SESSIONS[0].sessions}/>
                     <PerformenceSession performence={data.USER_PERFORMANCE[0].data}/>
-                    <Score score={data.USER_MAIN_DATA[0].todayScore}/>
+                    <Score score={data.USER_MAIN_DATA[0]}/>
                 </div>
               </div>
 
               <aside className={styles.stats}>
-                <div className={styles.rectangle}></div>
-                <div className={styles.rectangle}></div>
-                <div className={styles.rectangle}></div>
-                <div className={styles.rectangle}></div>
+                <CardKeyData 
+                  type={"Calories"} 
+                  value={data.USER_MAIN_DATA[0].keyData.calorieCount}
+                />
+                <CardKeyData 
+                  type={"Proteines"} 
+                  value={data.USER_MAIN_DATA[0].keyData.proteinCount}
+                />
+                <CardKeyData 
+                  type={"Glucides"} 
+                  value={data.USER_MAIN_DATA[0].keyData.carbohydrateCount}
+                />
+                <CardKeyData 
+                  type={"Lipides"} 
+                  value={data.USER_MAIN_DATA[0].keyData.lipidCount}
+                />
               </aside>
             </div>
           </div>

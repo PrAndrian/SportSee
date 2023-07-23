@@ -1,6 +1,6 @@
 import React from 'react'
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import styles from '../styles/AverageSessionTime.module.css';
+import styles from '../../styles/AverageSessionTime.module.css';
 
 const AverageSessionTime = ({sessions}) => {
   return (

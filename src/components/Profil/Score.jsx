@@ -1,16 +1,17 @@
 import React from 'react'
-import styles from '../styles/Score.module.css'
+import styles from '../../styles/Score.module.css'
 import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
 
-const data = [
-    {
-        todayScore: 0.12,
-    },
-  ];
 
 const Score = ({score}) => {
+  console.log("Score",score)
   return (
     <div className={styles.score}>
+        <h2 className={styles.scoreTitle}>Score</h2>
+        <span className={styles.scoreValue}>
+          {score.todayScore*100+"%"}
+          <p className={styles.objectifSentence}>de votre <br/> objectif</p>
+        </span>
         <ResponsiveContainer width="100%" height="100%">
             <RadialBarChart 
                 cx="50%" cy="50%"       
@@ -19,14 +20,21 @@ const Score = ({score}) => {
                 startAngle={180} 
                 endAngle={-180}
                 barSize={10} 
-                data={data}
+                data={[score]}
             >
-                <PolarAngleAxis type="number" domain={[0, 1]} angleAxisId={0} tick={false} />
+                <PolarAngleAxis 
+                  type="number" 
+                  domain={[0, 1]} 
+                  angleAxisId={0} 
+                  tick={false} 
+                />
                 <RadialBar
                     dataKey="todayScore"
-                    background
                     clockWise={true}
+                    fill="#E60000"
+                    radius={100}
                 />
+
             </RadialBarChart>
       </ResponsiveContainer>
     </div>
