@@ -1,7 +1,7 @@
  div:has( > #profil){
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #profil{
@@ -13,16 +13,19 @@
     width: 100%;
     margin-left: 7.43%;
     margin-right: 7.43%;
-    padding-top: 28px;
+    padding-top: 68px;
     margin-bottom: 88px;
 }
 
 h1{
     font-size: 48px;
+    margin-bottom: 41px;
+    font-weight: 600;
 }
 
 .name{
     color: #FF0101;
+    font-weight: inherit;
 }
 
 

@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1;
 }
