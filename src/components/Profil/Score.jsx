@@ -4,12 +4,11 @@ import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from '
 
 
 const Score = ({score}) => {
-  console.log("Score",score)
   return (
     <div className={styles.score}>
         <h2 className={styles.scoreTitle}>Score</h2>
         <span className={styles.scoreValue}>
-          {score.todayScore*100+"%"}
+          {score*100+"%"}
           <p className={styles.objectifSentence}>de votre <br/> objectif</p>
         </span>
         <ResponsiveContainer width="100%" height="100%">
@@ -20,7 +19,7 @@ const Score = ({score}) => {
                 startAngle={180} 
                 endAngle={-180}
                 barSize={10} 
-                data={[score]}
+                data={[{todayScore : score}]}
             >
                 <PolarAngleAxis 
                   type="number" 

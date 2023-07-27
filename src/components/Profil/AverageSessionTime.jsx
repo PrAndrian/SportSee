@@ -17,7 +17,6 @@ const AverageSessionTime = ({sessions}) => {
                 let mouseXpercentage = Math.round(
                   (e.activeCoordinate.x / windowWidth) * 100
                   )
-                  console.log(mouseXpercentage)
                 div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`
               }
             }}

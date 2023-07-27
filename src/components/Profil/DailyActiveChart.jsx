@@ -121,7 +121,6 @@ let dataKeyValue = (day) => {
   const date = new Date(day);
   const dataKey = date.getDate();
   dataKey.toString();
-  console.log(typeof dataKey);
   return dataKey;
 };
 
