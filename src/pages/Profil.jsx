@@ -2,34 +2,31 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from '../components/Profil/Sidebar'
 import styles from '../styles/Profil.module.css'
 import DailyActiveChart from '../components/Profil/DailyActiveChart';
-import data from '../data/data'
 import AverageSessionTime from '../components/Profil/AverageSessionTime';
 import PerformenceSession from '../components/Profil/PerformenceSession';
 import Score from '../components/Profil/Score';
 import CardKeyData from '../components/Profil/CardKeyData';
 import { useParams } from 'react-router';
-import axios from 'axios';
+import fetchUserData from '../utils/fetchUserData';
+import fetchUserActivity from '../utils/fetchUserActivity';
+import fetchUserAvgSessions from '../utils/fetchUserAvgSessions';
+import fetchUserPerformance from '../utils/fetchUserPerformance';
 
 const Profil = () => {
   const {userId} = useParams()
+  
   const [userData,getUser] = useState('')
-  
-  const getUserData = (userId) =>{
-    axios.get(`http://localhost:3000/user/${userId}`)
-    .then(response => {
-      const data = response.data.data;
-      getUser(data)
-    })
-    .catch(error => console.log(error.message));
-  }
-  
+  const [dailyActivity,getDailyActivity] = useState('')
+  const [avgSessions,getAvgSessions] = useState('')
+  const [performance,getPerformance] = useState('')
 
   useEffect(() => {
-      getUserData(userId)
+      fetchUserData(userId,getUser)
+      fetchUserActivity(userId,getDailyActivity)
+      fetchUserAvgSessions(userId,getAvgSessions)
+      fetchUserPerformance(userId,getPerformance)
   }, [userId])
   
-  console.log(userData)
-
   if(!userData){
     return null
   }
@@ -44,10 +41,10 @@ const Profil = () => {
           <div className={styles.container}>
             <div className={styles.info}>
               <div className={styles.chartsContainer}>
-                <DailyActiveChart sessions={data.USER_ACTIVITY[0].sessions}/>
+                <DailyActiveChart sessions={dailyActivity.sessions}/>
                 <div className={styles.squareCharts}> 
-                    <AverageSessionTime sessions={data.USER_AVERAGE_SESSIONS[0].sessions}/>
-                    <PerformenceSession performence={data.USER_PERFORMANCE[0].data}/>
+                    <AverageSessionTime sessions={avgSessions.sessions}/>
+                    <PerformenceSession performence={performance.data}/>
                     <Score score={userData.score? userData.score : userData.todayScore}/>
                 </div>
               </div>
@@ -67,7 +64,7 @@ const Profil = () => {
                 />
                 <CardKeyData 
                   type={"Lipides"} 
-                  value={data.USER_MAIN_DATA[0].keyData.lipidCount}
+                  value={userData.keyData.lipidCount}
                 />
               </aside>
             </div>

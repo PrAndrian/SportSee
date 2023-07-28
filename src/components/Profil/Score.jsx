@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../../styles/Score.module.css'
 import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
 
-
 const Score = ({score}) => {
   return (
     <div className={styles.score}>
@@ -16,8 +15,8 @@ const Score = ({score}) => {
                 cx="50%" cy="50%"       
                 innerRadius='70%'
                 outerRadius='70%'
-                startAngle={180} 
-                endAngle={-180}
+                startAngle={90} 
+                endAngle={450}
                 barSize={10} 
                 data={[{todayScore : score}]}
             >
@@ -29,11 +28,10 @@ const Score = ({score}) => {
                 />
                 <RadialBar
                     dataKey="todayScore"
-                    clockWise={true}
+                    radius={[10]}
                     fill="#E60000"
-                    radius={100}
+                    cornerRadius={30 / 2}
                 />
-
             </RadialBarChart>
       </ResponsiveContainer>
     </div>

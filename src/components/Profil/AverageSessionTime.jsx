@@ -12,13 +12,15 @@ const AverageSessionTime = ({sessions}) => {
             strokeWidth={1}
             onMouseMove={(e) => {
               if (e.isTooltipActive === true) {
-                let div = document.querySelector('.AverageSessionTime_AverageSessionTimeContainer__92UHO')
-                let windowWidth = div.clientWidth
-                let mouseXpercentage = Math.round(
-                  (e.activeCoordinate.x / windowWidth) * 100
-                  )
+                let div = document.querySelector('.AverageSessionTime_AverageSessionTimeContainer__92UHO');
+                let windowWidth = div.clientWidth;
+                let mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100)
                 div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`
               }
+            }}
+            onMouseLeave={(e) => {
+              let div = document.querySelector('.AverageSessionTime_AverageSessionTimeContainer__92UHO');
+              div.style.background = 'rgba(255,0,0,1)';
             }}
         >
           <defs>

@@ -1,0 +1,21 @@
+.container{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 20px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+.container > a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #EF0000;
+    cursor: pointer;
+}
