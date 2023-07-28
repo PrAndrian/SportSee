@@ -18,7 +18,7 @@ const DailyActiveChart = ({sessions}) => {
       <ResponsiveContainer width='100%' height='100%'>
           <BarChart
             data={sessions}
-            margin={{ top: 100, right: 48, bottom: -20, left: 50 }}
+            margin={{ top: 100, right: 48, bottom: 0, left: 50 }}
             barGap={8}
             barCategoryGap="35%"
             style={{
