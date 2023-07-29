@@ -15,7 +15,6 @@ import styles from '../../styles/DailyActiveChart.module.css';
 
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
-    console.log(active);
     return (
       <div className={styles.tooltip_container}>
         <p>
