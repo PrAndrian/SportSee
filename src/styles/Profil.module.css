@@ -1,7 +1,6 @@
  div:has( > #profil){
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
 }
 
 #profil{

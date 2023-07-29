@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from '../styles/404.module.css'
 
-const Error404 = () => {
+function Error404() {
+  document.title = 'Kasa - Error 404';
+
   return (
-    <div>404</div>
-  )
+    <div id={styles.page404}>
+      <h1 className={styles.error404}>404</h1>
+      <p className={styles.sentence404}>Oups! La page que vous demandez n'existe pas.</p>
+      <Link className={styles.link404} to="/">Retourner sur la page d'accueil</Link>
+    </div>
+  );
 }
 
-export default Error404
+export default Error404;

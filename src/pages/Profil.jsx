@@ -11,8 +11,8 @@ import CardKeyData from '../components/Profil/CardKeyData';
 
 const Profil = () => {
   const userData = useLoaderData()
-  console.log("this is the data : ",userData)
-  if(!userData.info){
+  
+  if(!(userData.info || userData.dailyActivity || userData.avgSessions || userData.performance)){
     return <Navigate to="/404"/>
   }
   
