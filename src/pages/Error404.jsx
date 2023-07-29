@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../styles/404.module.css'
+import styles from '../styles/404.module.css';
 
 function Error404() {
   document.title = 'Kasa - Error 404';

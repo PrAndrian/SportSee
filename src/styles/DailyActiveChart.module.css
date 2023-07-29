@@ -6,6 +6,7 @@
 .tooltip_container > p{
     font-size: 10px;
     font-weight: 500;
+    background:"#2b2d30";
 }
 
 .tooltip_container{

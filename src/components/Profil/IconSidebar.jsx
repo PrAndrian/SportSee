@@ -1,12 +1,16 @@
-import React from 'react'
-import styles from '../../styles/IconSidebar.module.css' 
+/* eslint-disable linebreak-style */
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../../styles/IconSidebar.module.css';
 
-const IconSidebar = ({image}) => {
+function IconSidebar({ image }) {
   return (
     <div className={styles.icon}>
-       <img src={image} alt="icon" /> 
+      <img src={image} alt="icon" />
     </div>
-  )
+  );
 }
-
-export default IconSidebar
+IconSidebar.propTypes = {
+  image: PropTypes.string.isRequired,
+};
+export default IconSidebar;

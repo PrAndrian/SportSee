@@ -1,13 +1,14 @@
-import React from 'react'
-import logo from '../assets/logo.png'
-import styles from '../styles/Navbar.module.css'
-import { Link, NavLink } from 'react-router-dom'
+/* eslint-disable linebreak-style */
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import styles from '../styles/Navbar.module.css';
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav id={styles.navbar} aria-labelledby="navbar">
       <Link to="/">
-        <img className={styles.logo} src={logo} alt="SportSee_logo"/>
+        <img className={styles.logo} src={logo} alt="SportSee_logo" />
       </Link>
 
       <div className={styles.links}>
@@ -25,9 +26,8 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

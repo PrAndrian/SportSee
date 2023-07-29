@@ -1,10 +1,11 @@
+/* eslint-disable linebreak-style */
 class UserModel {
-    constructor(info,dailyActivity, avgSessions, performance) {
-        this.info = info;
-        this.dailyActivity = dailyActivity;
-        this.avgSessions = avgSessions;
-        this.performance = performance;
-    }
+  constructor(info, dailyActivity, avgSessions, performance) {
+    this.info = info;
+    this.dailyActivity = dailyActivity;
+    this.avgSessions = avgSessions;
+    this.performance = performance;
+  }
 }
 
-export default UserModel
+export default UserModel;
