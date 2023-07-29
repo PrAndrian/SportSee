@@ -2,7 +2,7 @@ import fetcher from './fetcher';
 import UserModel from './UserModel';
 
 async function profilRequest(userId){
-  const type = 'API'
+  const type = 'MOCK'
   console.log(type,'is used')
   
   const urlInfo = `http://localhost:3000/user/${userId}`
