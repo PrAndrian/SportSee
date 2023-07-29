@@ -3,7 +3,7 @@ import fetcher from './fetcher';
 import UserModel from './UserModel';
 
 async function profilRequest(userId) {
-  const type = 'API'; // API or MOCK
+  const type = 'MOCK'; // API or MOCK
   // eslint-disable-next-line no-console
   console.log(type, 'is used');
 

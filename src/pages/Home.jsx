@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/Home.module.css';
 
 function Home() {
+  document.title = 'SportSee - Accueil';
   return (
     <main className={styles.container}>
       <h1>Voir pages profils</h1>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/404.module.css';
 
 function Error404() {
-  document.title = 'Kasa - Error 404';
+  document.title = 'SportSee - Page non trouvée';
 
   return (
     <div id={styles.page404}>

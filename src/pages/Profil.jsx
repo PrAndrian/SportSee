@@ -16,6 +16,8 @@ function Profil() {
     return <Navigate to="/404" />;
   }
 
+  document.title = `SportSee - Profil de ${userData.info?.userInfos?.firstName} ${userData.info?.userInfos?.lastName}`;
+
   return (
     <main id={styles.profil}>
       <Sidebar />
