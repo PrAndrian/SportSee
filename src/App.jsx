@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import Profil from './pages/Profil'
 import Error404 from './pages/Error404'
 import Home from './pages/Home';
+import profilRequest from './utils/profilRequest';
 
 function App() {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ function App() {
         <Route 
           path='/profil/:userId' 
           element={<Profil />}
+          loader ={({params}) => profilRequest(params.userId)}
         />
 
         <Route 
@@ -33,7 +35,7 @@ function App() {
           element={<Error404 />}
         />
         
-        <Route path="*" element={<Error404 />} />
+        <Route path="/*" element={<Error404 />} />
       </Route>,
     ),
   );
