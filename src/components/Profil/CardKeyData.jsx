@@ -15,19 +15,21 @@ const CardKeyData = ({type,value}) => {
             case "Calories": 
                 setImageUrl(imageCalories)
                 setUnit('Kcal')
-                setConvertValue(value*0.001)
-                break;
-                case "Proteines": 
+                setConvertValue(new Intl.NumberFormat("en-IN", 
+                {maximumSignificantDigits: 3,})
+                .format(value))
+            break;
+            case "Proteines": 
                 setImageUrl(imageCarbs)
                 setUnit('g')
                 setConvertValue(value)
-                break;
-                case "Glucides": 
+            break;
+            case "Glucides": 
                 setImageUrl(imageFat)
                 setUnit('g')
                 setConvertValue(value)
-                break;
-                case "Lipides": 
+            break;
+            case "Lipides": 
                 setImageUrl(imageProtein)
                 setUnit('g')
                 setConvertValue(value)
