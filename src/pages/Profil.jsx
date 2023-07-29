@@ -6,16 +6,14 @@ import AverageSessionTime from '../components/Profil/AverageSessionTime';
 import PerformenceSession from '../components/Profil/PerformenceSession';
 import Score from '../components/Profil/Score';
 import CardKeyData from '../components/Profil/CardKeyData';
-// import { useParams } from 'react-router';
-// import useProfilRequest from '../utils/useProfilRequest';
 
 const Profil = () => {
   const userData = useLoaderData()
-  
-  if(!(userData.info || userData.dailyActivity || userData.avgSessions || userData.performance)){
-    return <Navigate to="/404"/>
-  }
-  
+    
+    if(!(userData.info || userData.dailyActivity || userData.avgSessions || userData.performance)){
+      return <Navigate to="/404"/>
+    }
+    
   return (
     <main id={styles.profil}>
         <Sidebar/>
