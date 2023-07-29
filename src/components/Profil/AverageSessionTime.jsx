@@ -111,7 +111,16 @@ SessionsToolType.defaultProps = {
 
 SessionsToolType.propTypes = {
   active: PropTypes.bool,
-  payload: PropTypes.arrayOf(PropTypes.string),
+  payload: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ])),
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.string,
+  ]))),
 };
 
 AverageSessionTime.propTypes = {

@@ -15,6 +15,7 @@ import styles from '../../styles/DailyActiveChart.module.css';
 
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
+    console.log(active);
     return (
       <div className={styles.tooltip_container}>
         <p>
@@ -148,7 +149,16 @@ CustomTooltip.defaultProps = {
 };
 CustomTooltip.propTypes = {
   active: PropTypes.bool,
-  payload: PropTypes.arrayOf(PropTypes.string),
+  payload: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ])),
+    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.string,
+  ]))),
 };
 DailyActiveChart.propTypes = {
   sessions: PropTypes.arrayOf(PropTypes.objectOf(
