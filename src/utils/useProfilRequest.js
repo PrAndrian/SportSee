@@ -3,7 +3,7 @@ import data from '../data/data'
 import UserModel from './UserModel';
 import { useEffect, useState } from 'react';
 
-const mockdata = true;
+const mockdata = false;
 
 const fetchUserInfo = async (userId,setter) => {
   if(!mockdata){
@@ -92,10 +92,10 @@ const useProfilRequest = (userId) => {
     const [userPerformance,sePerformance] = useState({})
 
     useEffect(() => {
-          fetchUserInfo(userId,setUserInfo)
-          fetchUserActivity(userId,setActivity)
-          fetchUserAvgSessions(userId,setAvgSessions)
-          fetchUserPerformance(userId,sePerformance)
+      fetchUserInfo(userId,setUserInfo)
+      fetchUserActivity(userId,setActivity)
+      fetchUserAvgSessions(userId,setAvgSessions)
+      fetchUserPerformance(userId,sePerformance)
     }, [userId])          
     
     return new UserModel(userInfo,userActivity,userAvgSessions,userPerformance)

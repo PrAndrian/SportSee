@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../../styles/DailyActiveChart.module.css'
 import { 
     BarChart, 
@@ -12,6 +12,8 @@ import {
   } from 'recharts';
 
 const DailyActiveChart = ({sessions}) => {
+  const [mouseXpos, setMouseXpos] = useState(0)
+
   return (
     <div className={styles.dailyActiveChartContainer}>
       <h2 className={styles.title}>Activité quotidienne</h2>
@@ -24,7 +26,12 @@ const DailyActiveChart = ({sessions}) => {
             style={{
               backgroundColor:"#FBFBFB",
             }}
-            >
+            onMouseMove={(e)=>{
+              if (e.isTooltipActive === true) {
+                setMouseXpos(e.activeCoordinate.x)
+              }
+            }}
+          >
 
           <CartesianGrid
               strokeDasharray="3 3"
@@ -79,8 +86,9 @@ const DailyActiveChart = ({sessions}) => {
           <Tooltip
               content={<CustomTooltip />}         
               cursor={{
-              fill: "rgba(0, 0, 0, 0.1)",
+                fill: "rgba(0, 0, 0, 0.1)",
               }}
+              position={{ x:mouseXpos+80 ,y: 60 }}
           />
 
           <Legend wrapperStyle={{width:200,top:0,right:158 }} content={<CusomizedLegend />}/>
