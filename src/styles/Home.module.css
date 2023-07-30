@@ -1,4 +1,4 @@
-.container{
+.card{
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -7,15 +7,33 @@
     justify-content: center;
     gap : 20px;
     border: 2px solid black;
-    padding: 20px;
-    margin: 100px auto;
+    border-radius: 30px;
+    padding: 50px;
+    background-color: black;
 }
 
-.container > a{
+.card > a{
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #EF0000;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.card > a:hover{
+    background-color: #EF0000;
+}
+
+.card > h1{
+    color: #EF0000;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }

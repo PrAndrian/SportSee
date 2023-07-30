@@ -7,9 +7,11 @@ function Home() {
   document.title = 'SportSee - Accueil';
   return (
     <main className={styles.container}>
-      <h1>Voir pages profils</h1>
-      <Link to={`/profil/${12}`}>Karl Dovineau</Link>
-      <Link to={`/profil/${18}`}>Cecilia Ratorez</Link>
+      <div className={styles.card}>
+        <h1>Voir pages profils</h1>
+        <Link to={`/profil/${12}`}>Karl Dovineau</Link>
+        <Link to={`/profil/${18}`}>Cecilia Ratorez</Link>
+      </div>
     </main>
   );
 }
