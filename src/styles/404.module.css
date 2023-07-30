@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     color : #FF0101;
+    background-color: black;
     padding : 50px;
 }
 
@@ -37,7 +38,7 @@
         align-items: center;
         flex-direction: column;
         color : #FF0101;
-        padding : 50px 0;
+        height: 100vh;
     }
 
     .error404{
@@ -50,15 +51,15 @@
     .sentence404{
         font-weight: 500;
         font-size: 36px;
-        margin-bottom: 182px;
+        margin-bottom: 0px;
     }
     
     .link404{
         font-weight: 500;
         font-size: 18px;
         text-decoration: underline;
-        margin-bottom: 235px;
-        color : black;
+        margin-top: 80px;
+        color : white;
     }
     
 }

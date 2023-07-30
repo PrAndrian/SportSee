@@ -17,7 +17,15 @@ async function profilRequest(userId) {
   const userAvgSessions = await fetcher(type, urlAvgSessions, userId);
   const userPerformance = await fetcher(type, urlPerformance, userId);
 
-  return new UserModel(userInfo, userActivity, userAvgSessions, userPerformance);
+  return new UserModel(
+    userInfo.id,
+    userInfo,
+    userInfo.score ? userInfo.score : userInfo.todayScore,
+    userInfo.keyData,
+    userActivity,
+    userAvgSessions,
+    userPerformance,
+  );
 }
 
 export default profilRequest;

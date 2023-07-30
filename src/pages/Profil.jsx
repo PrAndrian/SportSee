@@ -35,30 +35,26 @@ function Profil() {
               <div className={styles.squareCharts}>
                 <AverageSessionTime sessions={userData.avgSessions?.sessions} />
                 <PerformenceSession performence={userData.performance?.data} />
-                <Score score={
-                  userData.info?.score
-                    ? userData.info?.score : userData.info?.todayScore
-                }
-                />
+                <Score score={userData.todayScore} />
               </div>
             </div>
 
             <aside className={styles.stats}>
               <CardKeyData
                 type="Calories"
-                value={userData.info?.keyData?.calorieCount}
+                value={userData.keyData?.calorieCount}
               />
               <CardKeyData
                 type="Proteines"
-                value={userData.info?.keyData?.proteinCount}
+                value={userData.keyData?.proteinCount}
               />
               <CardKeyData
                 type="Glucides"
-                value={userData.info?.keyData?.carbohydrateCount}
+                value={userData.keyData?.carbohydrateCount}
               />
               <CardKeyData
                 type="Lipides"
-                value={userData.info?.keyData?.lipidCount}
+                value={userData.keyData?.lipidCount}
               />
             </aside>
           </div>
