@@ -19,7 +19,7 @@ const fetcher = async (type, url, userId) => {
         const data = await response.json();
         res = data.data;
       } catch (error) {
-        console.log(error.message);
+        throw new Response(`${error.message}`, { status: 404 });
       }
       break;
 

@@ -11,8 +11,15 @@ import CardKeyData from '../components/Profil/CardKeyData';
 
 function Profil() {
   const userData = useLoaderData();
-
-  if (!(userData.info || userData.dailyActivity || userData.avgSessions || userData.performance)) {
+  if (!(
+    userData.id
+    || userData.info
+    || userData.todayScore
+    || userData.keyData
+    || userData.dailyActivity
+    || userData.avgSessions
+    || userData.performance
+  )) {
     return <Navigate to="/404" />;
   }
 

@@ -24,6 +24,7 @@ function App() {
           path="/profil/:userId"
           element={<Profil />}
           loader={({ params }) => profilRequest(params.userId)}
+          errorElement={<Error404 />}
         />
 
         <Route
