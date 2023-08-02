@@ -4,6 +4,13 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import styles from '../styles/Navbar.module.css';
 
+/**
+ * Composant de la navbar horizontal.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
+
 function Navbar() {
   return (
     <nav id={styles.navbar} aria-labelledby="navbar">

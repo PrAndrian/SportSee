@@ -6,6 +6,12 @@ import {
 import PropTypes from 'prop-types';
 import styles from '../../styles/PerformenceSession.module.css';
 
+/**
+ * Valeur de la datakey pour le graphe PerformenceSession
+ *
+ * @param {number} day - Prop représentant le chiffre de la catégorie performance.
+ * @returns {string} Le label de la catégorie performance associée au chiffre.
+ */
 const dataKeyValue = (kind) => {
   switch (kind) {
     case 1:
@@ -25,6 +31,13 @@ const dataKeyValue = (kind) => {
   }
 };
 
+/**
+ * Composant représantant le graphe de performences de sessions
+ *
+ * @component
+ * @param {Object} sessions - un prop représentant les performances des sessions de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function PerformenceSession({ performence }) {
   return (
     <div className={styles.PerformenceSession}>

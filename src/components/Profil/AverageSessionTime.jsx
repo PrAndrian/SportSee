@@ -6,6 +6,12 @@ import {
 import PropTypes from 'prop-types';
 import styles from '../../styles/AverageSessionTime.module.css';
 
+/**
+ * Calcule la somme de deux nombres.
+ *
+ * @param {number} day - Le nombre représentant un des jours de la semaine.
+ * @returns {string} Le jour correspondant au nombre passé.
+ */
 const dataKeyValue = (day) => {
   switch (day) {
     case 1:
@@ -27,6 +33,15 @@ const dataKeyValue = (day) => {
   }
 };
 
+/**
+ * Composant info-bulle du composant "AverageSessionTime"
+ *
+ * @component
+ * @param {Boolean} active - un prop représentant si l'info-bulle est active
+ * @param {Array} payload - un prop représentant tableau contenant les données
+ * associées au point de données survolé
+ * @returns {JSX.Element} Le composant React.
+ */
 function SessionsToolType({ active, payload }) {
   if (active) {
     return (
@@ -42,6 +57,13 @@ function SessionsToolType({ active, payload }) {
   return null;
 }
 
+/**
+ * Composant du graphe des sessions moyenne de l'utilisateur.
+ *
+ * @component
+ * @param {Object} sessions - un prop représentant les temps de sessions en moyenne de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function AverageSessionTime({ sessions }) {
   return (
     <div className={styles.AverageSessionTimeContainer}>

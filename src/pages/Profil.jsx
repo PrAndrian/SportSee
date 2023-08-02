@@ -9,6 +9,12 @@ import PerformenceSession from '../components/Profil/PerformenceSession';
 import Score from '../components/Profil/Score';
 import CardKeyData from '../components/Profil/CardKeyData';
 
+/**
+ * Page du profil utilisateur.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
 function Profil() {
   const userData = useLoaderData();
   if (!(

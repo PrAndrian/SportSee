@@ -13,6 +13,15 @@ import {
 import PropTypes from 'prop-types';
 import styles from '../../styles/DailyActiveChart.module.css';
 
+/**
+ * Composant représantant l'info-bulle du Composant "DailyActiveChart"
+ *
+ * @component
+ * @param {Boolean} active - un prop représentant si l'info-bulle est active
+ * @param {Array} payload - un prop représentant tableau contenant les données
+ * associées au point de données survolé
+ * @returns {JSX.Element} Le composant React.
+ */
 function CustomTooltip({ active, payload }) {
   if (active && payload) {
     return (
@@ -30,6 +39,13 @@ function CustomTooltip({ active, payload }) {
   return null;
 }
 
+/**
+ * Composant du graphe des sessions moyenne de l'utilisateur.
+ *
+ * @component
+ * @param {Object} sessions - un prop représentant les temps de sessions en moyenne de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function CusomizedLegend() {
   return (
     <div className={styles.legend_container}>
@@ -46,6 +62,12 @@ function CusomizedLegend() {
   );
 }
 
+/**
+ * Valeur de la datakey pour le graphe DailyActiveChart
+ *
+ * @param {number} day - Prop représentant le jour de l'activité.
+ * @returns {string} Le jour de l'activité en chiffre.
+ */
 const dataKeyValue = (day) => {
   const date = new Date(day);
   const dataKey = date.getDate();
@@ -53,6 +75,13 @@ const dataKeyValue = (day) => {
   return dataKey;
 };
 
+/**
+ * Composant du graphe des sessions quotidiennes de l'utilisateur
+ *
+ * @component
+ * @param {Object} sessions - un prop représentant les sessions quotidiennes de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function DailyActiveChart({ sessions }) {
   const [mouseXpos, setMouseXpos] = useState(0);
   return (

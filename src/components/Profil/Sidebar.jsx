@@ -7,6 +7,12 @@ import musculation from '../../assets/musculation.png';
 import natation from '../../assets/natation.png';
 import velo from '../../assets/velo.png';
 
+/**
+ * Composant de la sidebar vertical.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
 function Sidebar() {
   return (
     <nav className={styles.sidebar} aria-labelledby="sidebar">

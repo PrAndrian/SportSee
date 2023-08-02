@@ -3,6 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Home.module.css';
 
+/**
+ * Page d'accueil.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
 function Home() {
   document.title = 'SportSee - Accueil';
   return (

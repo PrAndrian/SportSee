@@ -7,6 +7,14 @@ import imageCarbs from '../../assets/carbs-icon.jpg';
 import imageFat from '../../assets/fat-icon.jpg';
 import imageProtein from '../../assets/protein-icon.jpg';
 
+/**
+ * Composant représantant la card des données clefs de l'utilisateur
+ *
+ * @component
+ * @param {string} type - Prop indiquant le type de valeur dans la card
+ * @param {number} value - Prop de la valeur des données clefs de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function CardKeyData({ type, value }) {
   const [imageUrl, setImageUrl] = useState('');
   const [unit, setUnit] = useState('');

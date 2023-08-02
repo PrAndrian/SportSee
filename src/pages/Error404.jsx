@@ -4,6 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/404.module.css';
 
+/**
+ * Page de l'erreur 404.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
 function Error404() {
   document.title = 'SportSee - Page non trouvée';
 

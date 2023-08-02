@@ -11,6 +11,12 @@ import Error404 from './pages/Error404';
 import Home from './pages/Home';
 import profilRequest from './utils/profilRequest';
 
+/**
+ * Systeme de route de l'application.
+ *
+ * @component
+ * @returns {JSX.Element} Le composant React.
+ */
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(

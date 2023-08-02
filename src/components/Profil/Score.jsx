@@ -6,6 +6,13 @@ import {
 import PropTypes from 'prop-types';
 import styles from '../../styles/Score.module.css';
 
+/**
+ * Composant représantant le score de l'objectif de l'utilisateur
+ *
+ * @component
+ * @param {number} score - un prop représentant le score de l'objectif de l'utilisateur
+ * @returns {JSX.Element} Le composant React.
+ */
 function Score({ score }) {
   return (
     <div className={styles.score}>
@@ -47,6 +54,7 @@ function Score({ score }) {
     </div>
   );
 }
+
 Score.propTypes = {
   score: PropTypes.number.isRequired,
 };
