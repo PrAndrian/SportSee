@@ -2,6 +2,17 @@
 /* eslint-disable no-console */
 import mockdata from '../data/data';
 
+/**
+ * Effectue une requête API pour récupérer des données.
+ *
+ * @async
+ * @function
+ * @param {string} type - Chaine de caractère indiquant la manière de fetch
+ * (depuis Mock Data ou API).
+ * @param {string} url - L'URL de l'API.
+ * @param {string} userId - Chaine de caractère représentant l'id utilisateur.
+ * @returns {Promise<any>} Une promesse qui se résout avec les données récupérées.
+ */
 const fetcher = async (type, url, userId) => {
   let res = null;
   let index = -1;

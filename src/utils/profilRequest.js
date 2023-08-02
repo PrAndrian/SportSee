@@ -2,6 +2,14 @@
 import fetcher from './fetcher';
 import UserModel from './UserModel';
 
+/**
+ * Effectue une requête API pour récupérer des données de l'utilisateur.
+ *
+ * @async
+ * @function
+ * @param {string} userId - Chaine de caractère représentant l'id utilisateur.
+ * @returns {UserModel} une classe qui représentant l'utilisateur et ses données.
+ */
 async function profilRequest(userId) {
   const type = 'MOCK'; // API or MOCK
   // eslint-disable-next-line no-console
