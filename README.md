@@ -39,7 +39,7 @@ If you are working with several versions of NodeJS, we recommend you install nvm
 
 Same as the thing as to run the application with the mocked data but add to this the following steps.
   
-git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git
+## `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
 to clone the backend repository
 
 The yarn command will allow you to install the dependencies.
