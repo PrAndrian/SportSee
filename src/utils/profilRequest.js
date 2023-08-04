@@ -13,7 +13,7 @@ import UserModel from './UserModel';
 async function profilRequest(userId) {
   const type = 'MOCK'; // API or MOCK
   // eslint-disable-next-line no-console
-  console.log(type, 'is used');
+  console.log(type, 'used');
 
   const urlInfo = `http://localhost:3000/user/${userId}`;
   const urlActivity = `http://localhost:3000/user/${userId}/activity`;

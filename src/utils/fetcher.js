@@ -54,8 +54,8 @@ const fetcher = async (type, url, userId) => {
 
           return user.id === Number(userId);
         });
-      } catch (e) {
-        console.log(e.message);
+      } catch (error) {
+        throw new Response(`${error.message}`, { status: 404 });
       }
       break;
 
