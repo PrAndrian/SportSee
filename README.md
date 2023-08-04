@@ -42,8 +42,8 @@ Same as the thing as to run the application with the mocked data but add to this
 ## `git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git`
 to clone the backend repository
 
-The yarn command will allow you to install the dependencies.
-The yarn dev command will allow you to run the micro API.
+- The yarn command will allow you to install the dependencies.
+- The yarn dev command will allow you to run the micro API.
 
 ## For more information go to : 
 https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
