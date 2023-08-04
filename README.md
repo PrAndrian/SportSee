@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# SportSee user interface 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo contains all the source code to run the interface of the sports analytics dashboard SportSee.
 
-## Available Scripts
+## 1. General information
 
-In the project directory, you can run:
+To start this project, you are free to use the mocked data version or the API version. In this documentation, we will see how to run both version.
+## 2. To run the application with the mocked data
 
-### `npm start`
+## 2.1 Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- NodeJS (version 16.15.1)
+- Npm
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
 
-### `npm test`
+## 2.2 Steps : 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `git clone https://github.com/PrAndrian/SportSee.git`
+to clone the repository
 
-### `npm run build`
+## `cd SportSee/`
+to go to the directory 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## `npm install`
+to install npm package and dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## `npm run start`
+To run the application 
+## 3. To run the application with the api 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 3.1 Prerequisites
 
-### `npm run eject`
+NodeJS (version 12.18)
+Yarn
+If you are working with several versions of NodeJS, we recommend you install nvm. This tool will allow you to easily manage your NodeJS versions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 3.2 Steps : 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Same as the thing as to run the application with the mocked data but add to this the following steps.
+  
+git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git
+to clone the backend repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The yarn command will allow you to install the dependencies.
+The yarn dev command will allow you to run the micro API.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## For more information go to : 
+https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
