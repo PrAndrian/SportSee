@@ -74,14 +74,14 @@ function AverageSessionTime({ sessions }) {
           strokeWidth={1}
           onMouseMove={(e) => {
             if (e.isTooltipActive === true) {
-              const div = document.querySelector('.AverageSessionTime_AverageSessionTimeContainer__92UHO');
+              const div = document.querySelector(`.${styles.AverageSessionTimeContainer}`);
               const windowWidth = div.clientWidth;
               const mouseXpercentage = Math.round((e.activeCoordinate.x / windowWidth) * 100);
               div.style.background = `linear-gradient(90deg, rgba(255,0,0,1) ${mouseXpercentage}%, rgba(175,0,0,1.5) ${mouseXpercentage}%, rgba(175,0,0,1.5) 100%)`;
             }
           }}
           onMouseLeave={() => {
-            const div = document.querySelector('.AverageSessionTime_AverageSessionTimeContainer__92UHO');
+            const div = document.querySelector(`.${styles.AverageSessionTimeContainer}`);
             div.style.background = 'rgba(255,0,0,1)';
           }}
         >
